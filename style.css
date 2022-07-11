@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+
+    /* padding: 0.5rem;
+  width: 100%;
+  color: white;
+  background-color: black; */
+}
+
+/* movies {
+    text-align: center;
+} */
+
+#like-section {
+    text-align: center;
+}
+
+#like-button {
+    text-align: center;
+    height: 50px;
+    color: green; 
+}
+
+#like-count {
+    font-family: Impact;
+    text-align: center;
+}
