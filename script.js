@@ -1,15 +1,16 @@
 const filmsUrl = "https://ghibliapi.herokuapp.com/films"
+const likeCount = document.getElementById("like-count")
 
 fetch(filmsUrl)
     .then(res => res.json())
-    .then(films => renderFilms(films))
+    .then(films => console.log(films))
 
-function renderFilms(films) {
-    const filmArray = films
-    filmArray.forEach((film)=>{
+// function renderFilms(films) {
+//     const filmArray = films
+//     filmArray.forEach((film)=>{
         
-    })
-} 
+//     })
+// } 
 
 document.getElementById("like-button").addEventListener("click", likeDisplay);
 
