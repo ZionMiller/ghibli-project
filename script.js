@@ -3,35 +3,42 @@ const filmsUrl = "https://ghibliapi.herokuapp.com/films"
 // const moveLeft = document.getElementsById("left-arrow");
 // const moveRight = document.getElementsById("right-arrow");
 
-const likeCount = document.getElementById("like-count")
-const filmCard = document.getElementById("movie-list")
-const filmDetails = document.getElementById("movie-details")
-let allMovieData
+const likeCount = document.getElementById("like-count");
+const movieCard = document.getElementById("movie-card");
+const movieDetails = document.getElementById("movie-details");
+const movieTitle = document.getElementById("movie-title");
+const movieImg = document.getElementById("movie-img");
 
-document.addEventListener('DOMContentLoaded', async () => {
-    await getFilmData()
-    console.log(allMovieData)
-})
+// let allMovieData
 
-const getFilmData = async () => {
-    await fetch(filmsUrl)
-        .then(res => res.json())
-        .then(films => {
-            allMovieData = films
-        })
+// get film data from ghibli
+
+const init = () => {
+fetch(filmsUrl)
+    .then(res => res.json())
+    .then(films => renderFilms(films))
 }
 
 function renderFilms(films) {
     const filmArray = films
-    // filmArray.forEach((films)=>{
-    //     let movieBox = document.createElement('li')
-    //     movieBox.src = films.image;
-    // })
-} 
+    console.log(filmArray)
+    movieTitle.innerText = filmArray.title;
+    movieImg.src = filmArray.image;
+}
 
-// document.getElementById("nav-dropdown").addEventListener('click', (e) => {
-//     console.log(e)
-// });
+// function renderFilms(movieCard) {
+//     // const filmArray = films
+//     // console.log(filmArray)
+//     // filmArray.forEach((films) => { 
+//        movieTitle.textContent = movieCard.title;
+//     //    movieDetails.innerHTML = filmArray.description;
+       
+//     // })
+// } 
+
+document.getElementById("nav-dropdown").addEventListener('click', (e) => {
+    console.log(e)
+});
 
 
 document.getElementById("like-button").addEventListener("click", likeDisplay);
@@ -49,5 +56,4 @@ document.getElementById("right-arrow").addEventListener('click', (e) => {
     console.log(e)
 })
 
-
-renderFilms(); 
+init();
