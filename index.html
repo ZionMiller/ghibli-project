@@ -17,24 +17,32 @@
     </header>
 
     <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
 
     <div id="root">
-
+        <select name="movies" id="select-movie">
+            <option value=""></option>
         </select>
-        <ul>
-            <li>
+    
                 <h1 id="movie-title"> Movie title goes here</h1>
-                    <div id="movie-list">
+                    <div id="movie-card">
                         <!-- placeholder image below -->
                         <img class="movie" src="https://m.media-amazon.com/images/I/517JG3Ih9NL.jpg">
                         <p> movie details here</p>
+                        <h3>Rating:</h3>
+                        <p>
+                            <span id='rating-display'>Insert rating here</span> / 10
+                        </p>
                         <button id="like-button">♥</button>
-                        <span id="like-count">0 likes</span>
+                        <span id="like-count">0 Likes</span>
+                        <h3>Reviews:</h3>
+                        <p id='comment-display'>
+                        <form action="#">
+                            <input type="text">
+                            <input type="submit" value="Submit">
+                        </form>
                     </div>
-            </li>
-        </ul>
-    </div>
+                </div>
 
     </div>
     <!-- Overlay content -->
