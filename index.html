@@ -8,16 +8,45 @@
 </head>
 
 <body>
+    <header>
+        <form  id="form">
+            <input type="text" placeholder="Search" id="search" class="search">
+        </form>
+    </header>
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content" id="overlay-content"></div>
+        
+    <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
+    
+    <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+
     <div id="root">
         <h1>Ghibli Reviews</h1>
         <select name="movies" id="movie-selection">
 
         </select>
-        <div id="movie-details"></div>
+        <div id="movie-details">
+
+        </div>
+
+        <div id="movie-list">
+        images here
+
+        </div>
         <div id="like-section">
             <button id="like-button">♥</button>
             <span id="like-count">0 likes</span>
-        </div>
+        </div>  
+
+        <main id="main">
+            <div class="movie">
+                <img src="">
+            </div>
+
     </div>
 
 </body>
