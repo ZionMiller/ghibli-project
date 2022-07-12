@@ -1,17 +1,21 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
-*{
-    box-sizing: border-box;
-}
+/* *{
+    box-sizing: border-box; */
+
+body {
+    
+    background: url("https://lh3.googleusercontent.com/qGuZeegxSpX5YF_jAYsIvqPuNCrSalvbLpoFFbvYMmIcuFOgcnZMf3FbfRU4NUY2TeoWNuurc7Jkt8AIUzGhjU5Ct2ieF8IfpHVcS-S3OQ19DrFHnzmYF4W7MTMu9IFyr1LFiKkkDE4=w307-h315-p-k"), url("https://lh3.googleusercontent.com/ylag5hg4t3G_Tsn10mcAMSGQmZw-PHuuGTEwgQIWLRVgQzrKOyDKLmclLGFhfsxTf9xncFPq3mU5nR8QG3zMC97SPvo__L0OXdbEcbX_sFlNmUOPs_r9cVab4A175Gjz8oMlnio0Tes=w248-h315-p-k");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+ }
 
 h1 {
     text-align: center;
-
-    /* padding: 0.5rem;
-  width: 100%;
-  color: white;
-  background-color: black; */
-}
+    font-family: Impact;
+    font-size: 80px;
+ }
 
 /* movies {
     text-align: center;
@@ -23,7 +27,7 @@ h1 {
 
 #like-button {
     text-align: center;
-    height: 50px;
+    height: 30px;
     color: green; 
 }
 
