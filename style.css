@@ -36,7 +36,7 @@
 #like-button {
     text-align: center;
     height: 30px;
-    color: green; 
+    color: #98002e; 
 }
 
 #like-count {
@@ -69,7 +69,7 @@ header{
     padding:0.5rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
-    color:#fff;
+    color:#f0ead6;
     font-family: inherit;
 }
 
@@ -79,5 +79,5 @@ header{
 }
 
 .search::placeholder{
-    color: #fff;
+    color: #f0ead6;
 }
