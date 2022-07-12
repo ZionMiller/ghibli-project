@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <h1>Ghibli Reviews</h1>
+        <h1 id="nav-dropdown">Ghibli Reviews</h1>
         <img class="nav image" src="https://i.ibb.co/XzNNjJx/totoro2.png">
         <form  id="form">
             <input type="text" placeholder="Search" id="search" class="search">
@@ -19,37 +19,30 @@
     <!-- Button to close the overlay navigation -->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
+    <div id="root">
+
+        </select>
+        <ul>
+            <li>
+                <h1 id="movie-title"> Movie title goes here</h1>
+                    <div id="movie-list">
+                        <!-- placeholder image below -->
+                        <img class="movie" src="https://m.media-amazon.com/images/I/517JG3Ih9NL.jpg">
+                        <p> movie details here</p>
+                        <button id="like-button">♥</button>
+                        <span id="like-count">0 likes</span>
+                    </div>
+            </li>
+        </ul>
+    </div>
+
+    </div>
     <!-- Overlay content -->
     <div class="overlay-content" id="overlay-content"></div>
         
     <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
     
     <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
-
-    <div id="root">
-        <select name="movies" id="movie-selection">
-
-        </select>
-        <div id="movie-details">
-
-        </div>
-
-        <div id="movie-list">
-        images here
-
-        </div>
-        <div id="like-section">
-            <button id="like-button">♥</button>
-            <span id="like-count">0 likes</span>
-        </div>  
-
-        <main id="main">
-            <div class="movie">
-                <img src="">
-            </div>
-
-    </div>
-
 </body>
 
 </html>
