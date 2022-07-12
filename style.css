@@ -12,9 +12,10 @@ body {
  }
 
 h1 {
-    text-align: center;
+    text-align: left;
     font-family: Impact;
-    font-size: 80px;
+    color: #f0ead6;
+    font-size: 20px;
  }
 
 /* movies {
@@ -71,5 +72,5 @@ header{
 }
 
 .search::placeholder{
-    color: #3e9f9f;
+    color: #fff;
 }
