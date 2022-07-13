@@ -23,9 +23,11 @@
         <select name="movies" id="select-movie">
             <option value=""></option>
         </select>
+
         <div id="card-body">
                 <div id="movie-card">
-                    <h1 id="movie-title"> Movie title goes here</h1>
+                    <!-- <h1 id="movie-title"> Movie title goes here</h1>  -->
+                    <!-- commented out because movie images contain titles -->
                     <!-- placeholder image below -->
                     <img id="movie-img" src="https://i.pinimg.com/originals/3c/e0/e0/3ce0e024d2543fba1bb2213170f85363.jpg">
                     <p id="movie-details"> movie details here</p>
@@ -38,11 +40,12 @@
                     <h3>Reviews:</h3>
                     <p id='comment-display'>
                     <form action="#">
-                        <input type="text">
-                        <input type="submit" value="Submit">
+                        <input id= "comment-form-body" type="text">
+                        <input id="comment-form-button" type="submit" value="Submit">
                     </form>
                 </div>
         </div>  
+
     </div>
     <!-- Overlay content -->
     <div class="overlay-content" id="overlay-content"></div>

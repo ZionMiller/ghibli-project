@@ -22,30 +22,34 @@ fetch(filmsUrl)
 function renderFilms(films) {
     const filmArray = films
     console.log(filmArray)
-    movieTitle.innerText = filmArray.title;
-    movieImg.src = filmArray.image;
+    // movieTitle.innerText = filmArray[0].title;
+    // commented out because movie images contain titles
+    movieImg.src = filmArray[0].image;
+    movieDetails.textContent = filmArray[0].description;
 }
 
-// function renderFilms(movieCard) {
-//     // const filmArray = films
-//     // console.log(filmArray)
-//     // filmArray.forEach((films) => { 
-//        movieTitle.textContent = movieCard.title;
-//     //    movieDetails.innerHTML = filmArray.description;
-       
-//     // })
-// } 
 
 document.getElementById("nav-dropdown").addEventListener('click', (e) => {
     console.log(e)
 });
 
-
 document.getElementById("like-button").addEventListener("click", likeDisplay);
+// document.getElementById("comment-form-button").addEventListener("submit", handleComments);
 
 function likeDisplay() {
     likeCount.textContent = parseInt(likeCount.textContent) + 1 + ` likes`
 }
+// playing with submit form
+
+//  function handleComments() {
+//     let commentDisplay = document.getElementById("comment-display")
+//     let commentBody = document.getElementById("comment-form-body")
+//     document.getElementById('comment-form-button').addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         commentBody.append(commentDisplay)
+//     })
+// }
+// handleComments();
 
 document.getElementById("left-arrow").addEventListener("click", (e) => {
     console.log(e)
@@ -55,5 +59,5 @@ document.getElementById("left-arrow").addEventListener("click", (e) => {
 document.getElementById("right-arrow").addEventListener('click', (e) => {
     console.log(e)
 })
-
+// invoke init to get data
 init();
