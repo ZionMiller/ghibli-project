@@ -10,28 +10,40 @@
 <body>
     <header>
         <h1 id="nav-dropdown">Ghibli Reviews</h1>
-        <img class="nav image" src="https://i.ibb.co/XzNNjJx/totoro2.png">
-        <form  id="form">
+        <select name="movies" id="select-movie">
+            <option value="">drop down selection</option>
+        </select>
+        <img class="nav-image" src="https://i.ibb.co/XzNNjJx/totoro2.png%22%3E">
+        <form id="form">
             <input type="text" placeholder="Search" id="search" class="search">
         </form>
     </header>
 
-    <!-- Button to close the overlay navigation -->
-    <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+    <div id="movie-collection">
 
-    <div id="root">
-        <select name="movies" id="select-movie">
+    </div>
+
+</body>
+
+</html>
+
+
+        <!-- <select name="movies" id="select-movie">
             <option value=""></option>
-        </select>
+        </select> -->
 
-        <div id="card-body">
-                <div id="movie-card">
+        <!-- <div id="card-body">
+                <div class="movie-card">
+
+                </div>
+        </div>   -->
+
                     <!-- <h1 id="movie-title"> Movie title goes here</h1>  -->
                     <!-- commented out because movie images contain titles -->
                     <!-- placeholder image below -->
-                    <img id="movie-img" src="https://i.pinimg.com/originals/3c/e0/e0/3ce0e024d2543fba1bb2213170f85363.jpg">
-                    <p id="movie-details"> movie details here</p>
-                    <h3>Rating:</h3>
+                    <!-- <img id="movie-img" src="https://i.pinimg.com/originals/3c/e0/e0/3ce0e024d2543fba1bb2213170f85363.jpg">
+                    <!- <p id="movie-details"> movie details here</p> -->
+                    <!-- <h3>Rating:</h3>
                     <p>
                         <span id='rating-display'>Insert rating here</span> / 10
                     </p>
@@ -42,17 +54,4 @@
                     <form action="#">
                         <input id= "comment-form-body" type="text">
                         <input id="comment-form-button" type="submit" value="Submit">
-                    </form>
-                </div>
-        </div>  
-
-    </div>
-    <!-- Overlay content -->
-    <div class="overlay-content" id="overlay-content"></div>
-        
-    <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
-    
-    <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
-</body>
-
-</html>
+                    </form> --> 
