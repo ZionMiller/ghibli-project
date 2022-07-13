@@ -8,25 +8,48 @@ const movieCard = document.getElementById("movie-card");
 const movieDetails = document.getElementById("movie-details");
 const movieTitle = document.getElementById("movie-title");
 const movieImg = document.getElementById("movie-img");
+const selectMovie = document.getElementById("select-movie");
+const cardBody = document.getElementById("card-body");
 
 // let allMovieData
 
 // get film data from ghibli
 
-const init = () => {
+function init(){
 fetch(filmsUrl)
     .then(res => res.json())
     .then(films => renderFilms(films))
 }
 
-function renderFilms(films) {
-    const filmArray = films
-    console.log(filmArray)
-    // movieTitle.innerText = filmArray[0].title;
-    // commented out because movie images contain titles
-    movieImg.src = filmArray[0].image;
-    movieDetails.textContent = filmArray[0].description;
+const renderFilms = films => {
+        films.forEach(film => {
+            const nameDrop = document.createElement('option');
+            selectMovie.append(nameDrop)
+            nameDrop.textContent = film.title;
+            const div = document.createElement('div')
+            // const image = document.createElement('img')
+            // image.src = film.image
+            // div.append(image)
+            // cardBody.append(div)
+
+        })
+        // selectMovie.addEventListener("change", chooseMovie)
+
+        //     function chooseMovie(e){
+        //          //const chosenMovie = e.target.value;
+                 
+        //          const filteredMovies = films.find((film)=>
+                    
+        //             (e.target.value.contains(film.name) ) 
+                    
+        //          )
+        //          console.log(filteredMovies) 
+        //     }
 }
+
+
+
+
 
 
 document.getElementById("nav-dropdown").addEventListener('click', (e) => {
