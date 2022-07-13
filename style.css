@@ -72,7 +72,7 @@ header{
     padding:0.5rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
-    color:#fff;
+    color:#f0ead6;
     font-family: inherit;
 }
 
@@ -87,7 +87,6 @@ header{
 
 #movie-card {
     text-align: center;
-   
     image-rendering: crisp-edges;
     padding: 3px;
     width: 25rem;
@@ -100,4 +99,7 @@ header{
 #movie-img {  
     max-width: 100%;  
     height: auto;  
-}  
+    box-shadow: 3px 4px var(--secondary-color);
+    color: #f0ead6;
+}
+
