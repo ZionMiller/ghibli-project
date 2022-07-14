@@ -4,27 +4,55 @@
     <meta charset="UTF-8">
     <title>Studio Ghibli Reviews</title>
     <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/e5cc9a0ce7.js" crossorigin="anonymous" defer> </script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- adding the modal which is the synopsis button-->
+    <div class="overlay hidden">
+        <div class="modal" >
+            <h4>Synopsis:</h4>
+            <p class="synopsis"></p>
+            <button class="closeModalBtn" ><u>Close</u> </button>
+        </div>
+    </div>
+
     <header>
-        <h1 id="nav-dropdown">Ghibli Reviews</h1>
-        <select name="movies" id="select-movie">
+        <h1 id="nav-dropdown">Studio Ghibli Movies</h1>
+        <select name="movies" id="drop-down">
             <option value="">drop down selection</option>
         </select>
-        <img class="nav-image" src="https://i.ibb.co/XzNNjJx/totoro2.png%22%3E%22%3E">
-        <form id="form">
-            <input type="text" placeholder="Search Film" id="search" class="search">
-        </form>
+        <img id="logo" src="https://i.ibb.co/Wfn9rHr/tumblr-mfoibvy2v41rfjowdo1-500.gif" height="200">
+
     </header>
 
-    <div id="movie-collection"></div>
+    <!--this part is implementing the search bar-->
+    <main>
+        <div class="containerForSearchBar">
+
+            <div id="searchWrapper">
+            <input
+                type="text"
+                name="searchBar"
+                id="searchBar"
+                placeholder="Search"
+            />
+        </div>
+
+        <ul id="movie-collection"></ul>
+
+        <div id="wrapper">
+            <div id="film-list">
+        </div>
+
+    </main>
+    <!-- <div id="movie-collection"></div> -->
 
 </body>
 
 </html>
-
 
 
 <!-- break point commented out code from main -->

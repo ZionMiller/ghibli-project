@@ -1,6 +1,14 @@
-#root{
+ #root{
     color: #f0ead6;
 }
+
+body {
+    font-family: sans-serif;
+    background-color: #54a393;
+    margin:0;
+    /* background-image: linear-gradient(#54a393, #54a39366);*/
+}
+
 header{
     padding: 1rem; 
     display: flex; 
@@ -10,199 +18,245 @@ header{
 
 /* sets the drop down color */
 #nav-dropdown {
-    text-align: auto;
+    text-align: left;
+    margin-left: 15%;
     font-family: sans-serif;
     color: #f0ead6;
-    font-size: 20px;
+    font-size: 70px;
+    color: #f0ead6;
+    margin-bottom: 30px;
+    text-shadow: 4px 4px 2px #00000057;
 }
 
 /* styles the search box, sets size */
-.search{
+.containerForSearchBar { 
+    padding-top: 40px;
+    margin: auto;
+    width:auto; 
+    max-width: 1000px;
+    text-align: left;
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+#searchBar {
     background-color: transparent;
-    border: 2px solid #f0ead6;
+    border: 2px solid;
     padding:1rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
     color:#f0ead6;
-    font-family: inherit;
-    text-align: center;
+    
 }
 
-/* sets the search box "search here" placeholder */
-.search::placeholder{
+#searchBar::placeholder{
     color: #f0ead6;
 }
-
-/* sets the hover color */
-.search:focus{
-    outline:0;
-    background-color: var(--primary-color);
+#searchBar:hover{
+    background-color: #0a00001a;
+        color: #eae3cc
 }
-
+/* SEARCH BAR DONE SECTION*/
 
 /* grid establishes row and columns, template allows us to adjust */
 #movie-collection {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    align-items: center;
+    padding-inline-start: 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
 }
 
-#card {
-    text-align: center;
-    border-radius: 25px;
-    background: var(--primary-color);
-    padding: 10px;
-    width: 300px;
-    height: 150px;
-    display: inline-grid;
-    color: #f0ead6;
-    box-shadow: 5px 4px #f0ead6;
-    padding: 5px;
-    width: 25rem;
-    height: auto;
+.movie-collection{
+    display: grid;
+    list-style-type: none;
+    background-color: #f0ead6;
+    border-radius: 18px;
+    padding: 20px;
+    width: 270px;
+    height: 350px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        'title liker'
+        'director poster'
+        'description poster';
+    text-align: left;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3);
 }
 
-.movie-img {
-    width: 250px;
-    height: auto;
+.movie-collection > h2 {
+    grid-area: title;
+     margin-bottom: 0px;
+}
+.movie-collection > #containerForHeartIcon{
+    grid-area: liker;
+    transform: translate(400%);
+}
+.movie-collection > h4 {
+    grid-area: director;
+}
+.movie-collection > .openModalButton {
+    grid-area: synopsis;
+    
+}
+.movie-collection > img {
+    max-height: 160px;
+    grid-area: poster;
+    transform: translate(20%);
+    width: 120px;
+    height: 160px;
 }
 
-#like-button {
-    justify-content: center;
-    font-size: 40px;
-    color: #0a0905;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
+.box { 
 
+    margin-top: 20px;
+    border: #0a0000;
+    border: 5em;
 }
 
-#like-count {
-    font-family: sans-serif;
-    justify-content: center;
-    color: #f0ead6;
-    font-size: 20px;
-    text-size-adjust: 20px;
-}
 
 :root{
     --primary-color:#54a393;
     --secondary-color: #41987b;
 }
 
-body{
-    background-color: var(--primary-color);
-    font-family: sans-serif;
-    margin: 0;
+/* 
+favroite button section */
+
+#containerForHeartIcon { 
+    height: 30px;
+    max-width:30px;
 }
 
-
-
-/* break point main code commented out */
-
-/* #root{
-    color: #f0ead6;
+i {
+    transform:translate(50%, 50%);
+    font-size: 1rem;
 }
 
-#nav-dropdown {
-    text-align: center;
-    font-family: sans-serif;
-    color: #f0ead6;
-    font-size: 35px;
-    padding:0.5rem 1rem;
+i:hover { 
+    color: red;
+    transition: .4s;
 }
 
-#movie-collection {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+.fa-solid{
+    color: red;
 }
 
-#card {
-    color: #f0ead6;
-    width: 250px;
-}
-
-.movie-img {
-    width: 250px;
-    height: auto;
-}
-
-#like-button {
-    justify-content: center;
-    font-size: 40px;
-    color: #0a0905;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-}
-
-#like-count {
-    font-family: sans-serif;
-    justify-content: center;
-    color: #f0ead6;
-    font-size: 20px;
-    text-size-adjust: 20px;
-}
-
-:root{
-    --primary-color:#54a393;
-    --secondary-color: #41987b;
-}
-
-body{
-    background-color: var(--primary-color);
-    font-family: sans-serif;
-    margin: 0;
-}
-
-header{
-    padding:.5rem;
-    display:flex;
-    justify-content: flex-end;
-    background-color: var(--secondary-color);
-}
-
-.nav-image{
-    object-fit: contain ;
-}
-
-.search{
+/*dropdown*/
+#drop-down {
     background-color: transparent;
-    border: 2px solid var(--primary-color);
+    border: 2px solid;
     padding:1rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
     color:#f0ead6;
-    font-family: inherit;
-    text-align: left;
+    position: absolute;
+    
 }
 
-.search:focus{
-    outline:0;
-    background-color: var(--primary-color);
-}
-
-.search::placeholder{
-    color: #fff;
-}
-
-#movie-card {
-    text-align: center;
-    image-rendering: crisp-edges;
-    padding: 3px;
-    width: 25rem;
-    height: auto;
-    /* display: inline-grid; */
-    /* margin: 1rem 2rem;*/
-    /* box-shadow: 5px 7px var(--secondary-color);*/
-/*} 
-
-/* #movie-img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 3px 4px var(--secondary-color);
+#drop-down::placeholder{
     color: #f0ead6;
-}  */
+}
+#drop-down:hover{
+    background-color: #0a00001a;
+        color: #eae3cc
+}
 
+/* modal section */
+#select-movie{
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid;
+    padding:1rem .5rem;
+    font-size: 1rem;
+    color:#f0ead6;
+    position:absolute;
+}
+
+
+#logo {
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+.overlay {
+    width: 700px;
+    height: 500px;
+    margin:auto;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 9999; 
+    border-radius: 25px;
+    
+
+}
+.hidden {
+    display: none;
+}
+
+.modal { 
+    max-width: 600px;
+    height: 300px;
+    margin:auto;
+    background-color: #e9e3cd;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3);
+    
+    
+}
+.modal > p {
+    font-family:sans-serif;
+}
+.modal >h4{
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+.openModalBtn { 
+    height: 30px;
+    max-width: 90px;
+    color: black;
+    background-color: #eae3cc;
+    border: none;
+    border-radius: 25px;
+    border-color: pink;
+    cursor: pointer;
+    
+}
+
+.openModalBtn:hover {
+    background-color: #0a0000;
+    color: #eae3cc
+}
+    
+
+
+.closeModalBtn {
+  height: 30px;
+    max-width: 80px;
+    color: black;
+    background-color: #eae3cc;
+    border: none;
+    border-radius: 25px;
+    border-color: pink; 
+    cursor: pointer;  
+}
+
+.closeModalBtn:hover {
+    background-color: #0a0000;
+    color: #eae3cc
+} 
