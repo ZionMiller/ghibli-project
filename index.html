@@ -21,9 +21,17 @@
 
     <header>
         <h1 id="nav-dropdown">Studio Ghibli Movies</h1>
+        <div id="searchWrapper">
+            <input
+                type="text"
+                name="searchBar"
+                id="searchBar"
+                placeholder="Search"
+            />
         <select name="movies" id="drop-down">
-            <option value="">drop down selection</option>
+            <option value="">select movie</option>
         </select>
+        </div>
         <img id="logo" src="https://i.ibb.co/Wfn9rHr/tumblr-mfoibvy2v41rfjowdo1-500.gif" height="200">
 
     </header>
@@ -31,15 +39,6 @@
     <!--this part is implementing the search bar-->
     <main>
         <div class="containerForSearchBar">
-
-            <div id="searchWrapper">
-            <input
-                type="text"
-                name="searchBar"
-                id="searchBar"
-                placeholder="Search"
-            />
-        </div>
 
         <ul id="movie-collection"></ul>
 
