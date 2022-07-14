@@ -10,10 +10,7 @@ const movieTitle = document.getElementById("movie-title");
 const movieImg = document.getElementById("movie-img");
 const selectMovie = document.getElementById("select-movie");
 const cardBody = document.getElementById("card-body");
-
-// let allMovieData
-
-// get film data from ghibli
+const ghibRev = document.getElementById("nav-dropdown");
 
 function init(){
 fetch(filmsUrl)
@@ -24,15 +21,41 @@ fetch(filmsUrl)
 const renderFilms = films => {
         films.forEach(film => {
             const nameDrop = document.createElement('option');
+            ghibRev.append(selectMovie)
             selectMovie.append(nameDrop)
             nameDrop.textContent = film.title;
             const div = document.createElement('div')
+
+
+
+
+
+            
+
             // const image = document.createElement('img')
             // image.src = film.image
             // div.append(image)
             // cardBody.append(div)
 
         })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // selectMovie.addEventListener("change", chooseMovie)
 
         //     function chooseMovie(e){
@@ -46,6 +69,7 @@ const renderFilms = films => {
         //          console.log(filteredMovies) 
         //     }
 }
+
 
 
 
@@ -74,13 +98,5 @@ function likeDisplay() {
 // }
 // handleComments();
 
-document.getElementById("left-arrow").addEventListener("click", (e) => {
-    console.log(e)
-    
-});
-
-document.getElementById("right-arrow").addEventListener('click', (e) => {
-    console.log(e)
-})
 // invoke init to get data
 init();

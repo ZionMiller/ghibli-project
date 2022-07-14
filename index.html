@@ -10,7 +10,10 @@
 <body>
     <header>
         <h1 id="nav-dropdown">Ghibli Reviews</h1>
-        <img class="nav image" src="https://i.ibb.co/XzNNjJx/totoro2.png">
+        <select name="movies" id="select-movie">
+            <option value=""></option>
+        </select>
+        <img class="nav-image" src="https://i.ibb.co/XzNNjJx/totoro2.png">
         <form  id="form">
             <input type="text" placeholder="Search" id="search" class="search">
         </form>
@@ -20,22 +23,20 @@
     <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
 
     <div id="root">
-        <select name="movies" id="select-movie">
-            <option value="choose movie title">choose movie title</option>
-        </select>
+        
 
         <div id="card-body">
                 <div id="movie-card">
                     <!-- <h1 id="movie-title"> Movie title goes here</h1>  -->
                     <!-- commented out because movie images contain titles -->
                     <!-- placeholder image below -->
-                    <img id="movie-img" src="https://i.pinimg.com/originals/3c/e0/e0/3ce0e024d2543fba1bb2213170f85363.jpg">
+                    <img id="movie-img" placeholder=src>
                     <p id="movie-details"> movie details here</p>
                     <h3>Rating:</h3>
                     <p>
                         <span id='rating-display'>Insert rating here</span> / 10
                     </p>
-                    <button id="like-button">Like ♥</button>
+                    <button id="like-button">♥</button>
                     <span id="like-count">0 Likes</span>
                     <h3>Reviews:</h3>
                     <p id='comment-display'>
@@ -50,9 +51,6 @@
     <!-- Overlay content -->
     <div class="overlay-content" id="overlay-content"></div>
         
-    <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
-    
-    <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
-</body>
+    </body>
 
 </html>
