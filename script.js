@@ -8,8 +8,6 @@ const movieTitle = document.getElementById("movie-title");
 const movieImg = document.getElementById("movie-img");
 const selectMovie = document.getElementById("select-movie");
 const cardBody = document.getElementById("card-body");
-const selectMovie = document.getElementById("select-movie");
-const cardBody = document.getElementById("card-body");
 const ghibRev = document.getElementById("nav-dropdown");
 
 function init(){
@@ -18,7 +16,14 @@ fetch(filmsUrl)
     .then(films => films.forEach(renderFilms))
 }
 
-function renderFilms(films) {
+const renderFilms = films => {
+        films.forEach(film => {
+            const nameDrop = document.createElement('option');
+            ghibRev.append(selectMovie)
+            selectMovie.append(nameDrop)
+            nameDrop.textContent = film.title;
+            const div = document.createElement('div')
+            // const image = document.createElement('img')
     const filmArray = films
     let movieCard = document.createElement('div');
     movieCard.id = "card";
@@ -35,24 +40,24 @@ function renderFilms(films) {
     movieCollection.append(movieCard);
 
   const dropDownHandle = films => {
-  films.forEach(film => {
          const nameDrop = document.createElement('option');
          ghibRev.append(selectMovie)
          selectMovie.append(nameDrop)
          nameDrop.textContent = films.title;
          const div = document.createElement('div')
-        
+        }
          renderFilms();
    }
 
 
           // const image = document.createElement('img')
+
             // image.src = film.image
             // div.append(image)
             // cardBody.append(div)
 
         })
-        // selectMovie.addEventListener("change", chooseMovie)
+  // selectMovie.addEventListener("change", chooseMovie)
 
         //     function chooseMovie(e){
         //          //const chosenMovie = e.target.value;
@@ -66,9 +71,7 @@ function renderFilms(films) {
         //     }
 }
 
-
 // }
-
 
 // document.getElementById("nav-dropdown").addEventListener('click', (e) => {
 //     console.log(e)
@@ -84,20 +87,13 @@ function renderFilms(films) {
 
 init();
 
-
-// commented out code
-
+});
     // movieTitle.innerText = filmArray[0].title;
     // commented out because movie images contain titles
     // movieImg.src = filmArray[0].image;
-
-// movieTitle.innerText = filmArray[0].title;
-// commented out because movie images contain titles
-// movieImg.src = filmArray[0].image;
-
-// movieDetails.textContent = filmArray[0].description;
-
-// playing with submit form
+    // movieTitle.innerText = filmArray[0].title;
+    // movieImg.src = filmArray[0].image;
+    // movieDetails.textContent = filmArray[0].description;
 
 //  function handleComments() {
 //     let commentDisplay = document.getElementById("comment-display")
@@ -107,4 +103,6 @@ init();
 //         commentBody.append(commentDisplay)
 //     })
 // }
+
 // handleComments();
+

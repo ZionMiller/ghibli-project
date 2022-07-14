@@ -10,6 +10,12 @@
 <body>
     <header>
 
+        <h1 id="nav-dropdown">Ghibli Reviews</h1>
+        <select name="movies" id="select-movie">
+            <option value=""></option>
+        </select>
+        <img class="nav-image" src="https://i.ibb.co/XzNNjJx/totoro2.png">
+
         <div style = "position:absolute; left:80px; top:-5.5px">
             <h1 id="nav-dropdown">Studio Ghibli Movies</h1>
         </div>
@@ -29,35 +35,35 @@
 
 
     <div id="root">
-        <select name="movies" id="select-movie">
-            <option value="choose movie title">choose movie title</option>
-        </select>
-    
-                <h2 id="movie-title"> Movie title goes here</h2>
-                    <div id="movie-card">
-                        <!-- placeholder image below -->
-                        <img class="movie" src="https://m.media-amazon.com/images/I/517JG3Ih9NL.jpg">
-                        <p> movie details here</p>
-                        <h3>Rating:</h3>
-                        <p>
-                            <span id='rating-display'>Insert rating here</span> / 10
-                        </p>
-                        <button id="like-button">♥</button>
-                        <span id="like-count">0 Likes</span>
-                        <h3>Reviews:</h3>
-                        <p id='comment-display'>
-                        <form action="#">
-                            <input type="text">
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
 
         <div id="card-body">
-               
+                <div id="movie-card">
+                    <!-- <h1 id="movie-title"> Movie title goes here</h1>  -->
+                    <!-- commented out because movie images contain titles -->
+                    <!-- placeholder image below -->
+                    <img id="movie-img" placeholder=src>
+                    <p id="movie-details"> movie details here</p>
+                    <h3>Rating:</h3>
+                    <p>
+                        <span id='rating-display'>Insert rating here</span> / 10
+                    </p>
+                    <button id="like-button">♥</button>
+                    <span id="like-count">0 Likes</span>
+                    <h3>Reviews:</h3>
+                    <p id='comment-display'>
+                    <form action="#">
+                        <input id= "comment-form-body" type="text">
+                        <input id="comment-form-button" type="submit" value="Submit">
+                    </form>
+                </div>
         </div>  
 
     </div>
-</body>
+    <!-- Overlay content -->
+    <div class="overlay-content" id="overlay-content"></div>
+        
+  </body>
+
 
 </html>
 
