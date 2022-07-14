@@ -17,12 +17,14 @@
     color: #f0ead6;
 }
 
-#nav-dropdown {
-    text-align: left;
+#nav-dropdown{
+    position: relative;
     font-family: Impact;
     color: #f0ead6;
-    font-size: 20px;
- }
+    font-size: 35px;
+    padding:0.5rem 1rem;
+
+}
 
 /* movies {
     text-align: center;
@@ -58,9 +60,8 @@ body{
     margin: 0;
 }
 
-
 header{
-    padding:1rem;
+    padding:.5rem;
     display:flex;
     justify-content: flex-end;
     background-color: var(--secondary-color);
@@ -69,11 +70,12 @@ header{
 .search{
     background-color: transparent;
     border: 2px solid var(--primary-color);
-    padding:0.5rem 1rem;
+    padding:1rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
     color:#f0ead6;
     font-family: inherit;
+    text-align: left;
 }
 
 .search:focus{
