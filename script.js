@@ -1,8 +1,6 @@
 const filmsUrl = "https://ghibliapi.herokuapp.com/films"
 
-// const moveLeft = document.getElementsById("left-arrow");
-// const moveRight = document.getElementsById("right-arrow");
-
+const movieCollection = document.getElementById('movie-collection');
 const likeCount = document.getElementById("like-count");
 const movieCard = document.getElementById("movie-card");
 const movieDetails = document.getElementById("movie-details");
@@ -15,7 +13,7 @@ const ghibRev = document.getElementById("nav-dropdown");
 function init(){
 fetch(filmsUrl)
     .then(res => res.json())
-    .then(films => renderFilms(films))
+    .then(films => films.forEach(renderFilms))
 }
 
 const renderFilms = films => {
@@ -25,38 +23,41 @@ const renderFilms = films => {
             selectMovie.append(nameDrop)
             nameDrop.textContent = film.title;
             const div = document.createElement('div')
-
-
-
-
-
-            
-
             // const image = document.createElement('img')
+    const filmArray = films
+    let movieCard = document.createElement('div');
+    movieCard.id = "card";
+    const img = document.createElement('img');
+    img.src = filmArray.image;
+    img.className = "movie-img";
+    const movieTitle = document.createElement('h2');
+    movieTitle.textContent = filmArray.title;
+
+    const movieDescription = document.createElement('p');
+    movieDescription.textContent = filmArray.description;
+
+    movieCard.append(img, movieTitle, movieDescription);
+    movieCollection.append(movieCard);
+
+  const dropDownHandle = films => {
+         const nameDrop = document.createElement('option');
+         ghibRev.append(selectMovie)
+         selectMovie.append(nameDrop)
+         nameDrop.textContent = films.title;
+         const div = document.createElement('div')
+        }
+         renderFilms();
+   }
+
+
+          // const image = document.createElement('img')
+
             // image.src = film.image
             // div.append(image)
             // cardBody.append(div)
 
         })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // selectMovie.addEventListener("change", chooseMovie)
+  // selectMovie.addEventListener("change", chooseMovie)
 
         //     function chooseMovie(e){
         //          //const chosenMovie = e.target.value;
@@ -70,23 +71,29 @@ const renderFilms = films => {
         //     }
 }
 
+// }
+
+// document.getElementById("nav-dropdown").addEventListener('click', (e) => {
+//     console.log(e)
+// });
+
+// // document.getElementById("like-button").addEventListener("click", likeDisplay);
+// // document.getElementById("comment-form-button").addEventListener("submit", handleComments);
+
+// function likeDisplay() {
+//     likeCount.textContent = parseInt(likeCount.textContent) + 1 + ` likes`
+// }
 
 
+init();
 
-
-
-
-document.getElementById("nav-dropdown").addEventListener('click', (e) => {
-    console.log(e)
 });
-
-document.getElementById("like-button").addEventListener("click", likeDisplay);
-// document.getElementById("comment-form-button").addEventListener("submit", handleComments);
-
-function likeDisplay() {
-    likeCount.textContent = parseInt(likeCount.textContent) + 1 + ` likes`
-}
-// playing with submit form
+    // movieTitle.innerText = filmArray[0].title;
+    // commented out because movie images contain titles
+    // movieImg.src = filmArray[0].image;
+    // movieTitle.innerText = filmArray[0].title;
+    // movieImg.src = filmArray[0].image;
+    // movieDetails.textContent = filmArray[0].description;
 
 //  function handleComments() {
 //     let commentDisplay = document.getElementById("comment-display")
@@ -96,7 +103,6 @@ function likeDisplay() {
 //         commentBody.append(commentDisplay)
 //     })
 // }
+
 // handleComments();
 
-// invoke init to get data
-init();

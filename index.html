@@ -9,21 +9,32 @@
 
 <body>
     <header>
+
         <h1 id="nav-dropdown">Ghibli Reviews</h1>
         <select name="movies" id="select-movie">
             <option value=""></option>
         </select>
         <img class="nav-image" src="https://i.ibb.co/XzNNjJx/totoro2.png">
+
+        <div style = "position:absolute; left:80px; top:-5.5px">
+            <h1 id="nav-dropdown">Studio Ghibli Movies</h1>
+        </div>
+        <!--<h1 id="nav-dropdown">Ghibli Reviews</h1>-->
+        <div id="totoro">
+            <img src="https://i.ibb.co/109PFqB/tumblr-mtti2m-JNHC1shdhdjo1-500.webp" width="150" height="70">
+            <img class="nav image" src="https://i.ibb.co/Wfn9rHr/tumblr-mfoibvy2v41rfjowdo1-500.gif" width="150" height="70" >
+        </div>
+        <!--<img class="nav image" src="https://i.ibb.co/XzNNjJx/totoro2.png">-->
         <form  id="form">
+
             <input type="text" placeholder="Search" id="search" class="search">
         </form>
     </header>
 
-    <!-- Button to close the overlay navigation -->
-    <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+    <div id="movie-collection">
+
 
     <div id="root">
-        
 
         <div id="card-body">
                 <div id="movie-card">
@@ -51,6 +62,8 @@
     <!-- Overlay content -->
     <div class="overlay-content" id="overlay-content"></div>
         
-    </body>
+  </body>
+
 
 </html>
+
