@@ -14,7 +14,6 @@
 } */
 
 #root{
-    text-align: center;
     color: #f0ead6;
 }
 
@@ -36,14 +35,18 @@
 } */
 
 #like-button {
-    text-align: center;
-    height: 30px;
-    color: #98002e; 
+    text-align: right;
+    text-size-adjust: 20px;
+    background-color: transparent;
+    border: var(--secondary-color);
+    border-radius: 0%;
+    height: 20px;
+    color: green; 
 }
 
 #like-count {
     font-family: Impact;
-    text-align: center;
+    text-align: left;
 }
 
 :root{
@@ -81,5 +84,24 @@ header{
 }
 
 .search::placeholder{
+    color: #fff;
+}
+
+#movie-card {
+    text-align: center;
+    image-rendering: crisp-edges;
+    padding: 3px;
+    width: 25rem;
+    height: auto;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 5px 7px var(--secondary-color);
+}
+
+#movie-img {  
+    max-width: 100%;  
+    height: auto;  
+    box-shadow: 3px 4px var(--secondary-color);
     color: #f0ead6;
 }
+
