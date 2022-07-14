@@ -1,6 +1,109 @@
 #root{
     color: #f0ead6;
 }
+header{
+    padding: 1rem; 
+    display: flex; 
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+} 
+
+/* sets the drop down color */
+#nav-dropdown {
+    text-align: auto;
+    font-family: sans-serif;
+    color: #f0ead6;
+    font-size: 20px;
+}
+
+/* styles the search box, sets size */
+.search{
+    background-color: transparent;
+    border: 2px solid #f0ead6;
+    padding:1rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#f0ead6;
+    font-family: inherit;
+    text-align: center;
+}
+
+/* sets the search box "search here" placeholder */
+.search::placeholder{
+    color: #f0ead6;
+}
+
+/* sets the hover color */
+.search:focus{
+    outline:0;
+    background-color: var(--primary-color);
+}
+
+
+/* grid establishes row and columns, template allows us to adjust */
+#movie-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    align-items: center;
+}
+
+#card {
+    text-align: center;
+    border-radius: 25px;
+    background: var(--primary-color);
+    padding: 10px;
+    width: 300px;
+    height: 150px;
+    display: inline-grid;
+    color: #f0ead6;
+    box-shadow: 5px 4px #f0ead6;
+    padding: 5px;
+    width: 25rem;
+    height: auto;
+}
+
+.movie-img {
+    width: 250px;
+    height: auto;
+}
+
+#like-button {
+    justify-content: center;
+    font-size: 40px;
+    color: #0a0905;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+
+}
+
+#like-count {
+    font-family: sans-serif;
+    justify-content: center;
+    color: #f0ead6;
+    font-size: 20px;
+    text-size-adjust: 20px;
+}
+
+:root{
+    --primary-color:#54a393;
+    --secondary-color: #41987b;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+
+
+/* break point main code commented out */
+
+/* #root{
+    color: #f0ead6;
+}
 
 #nav-dropdown {
     text-align: center;
@@ -94,12 +197,12 @@ header{
     /* display: inline-grid; */
     /* margin: 1rem 2rem;*/
     /* box-shadow: 5px 7px var(--secondary-color);*/
-}
+/*} 
 
-#movie-img {
+/* #movie-img {
     max-width: 100%;
     height: auto;
     box-shadow: 3px 4px var(--secondary-color);
     color: #f0ead6;
-} 
+}  */
 
