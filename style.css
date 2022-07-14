@@ -1,52 +1,51 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
-
-/* *{
-    box-sizing: border-box; */
-
-
-/* #right-arrrow {
-    
-}
-
-#left-arrow {
-
-} */
-
 #root{
     color: #f0ead6;
 }
 
-#nav-dropdown{
-    position: relative;
-    font-family: Impact;
+#nav-dropdown {
+    text-align: center;
+    font-family: sans-serif;
     color: #f0ead6;
     font-size: 35px;
     padding:0.5rem 1rem;
-
 }
 
-/* movies {
-    text-align: center;
+#movie-collection {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* .movie-img {
+   
 } */
 
-/* #like-section {
-    text-align: center;
-} */
+#card {
+    color: #f0ead6;
+    width: 250px;
+}
+
+.movie-img {
+    width: 250px;
+    height: auto;
+}
 
 #like-button {
-    text-align: right;
-    text-size-adjust: 20px;
-    background-color: transparent;
-    border: var(--secondary-color);
-    border-radius: 0%;
-    height: 20px;
-    color: green; 
+    justify-content: center;
+    font-size: 40px;
+    color: #0a0905;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+
 }
 
 #like-count {
-    font-family: Impact;
-    text-align: left;
+    font-family: sans-serif;
+    justify-content: center;
+    color: #f0ead6;
+    font-size: 20px;
+    text-size-adjust: 20px;
 }
 
 :root{
@@ -56,7 +55,7 @@
 
 body{
     background-color: var(--primary-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     margin: 0;
 }
 
@@ -65,6 +64,10 @@ header{
     display:flex;
     justify-content: flex-end;
     background-color: var(--secondary-color);
+}
+
+.nav-image{
+    object-fit: contain ;
 }
 
 .search{
@@ -93,15 +96,15 @@ header{
     padding: 3px;
     width: 25rem;
     height: auto;
-    display: inline-grid;
-    margin: 1rem 2rem;
+    / display: inline-grid; */
+    /* margin: 1rem 2rem;
     box-shadow: 5px 7px var(--secondary-color);
 }
 
-#movie-img {  
-    max-width: 100%;  
-    height: auto;  
+#movie-img {
+    max-width: 100%;
+    height: auto;
     box-shadow: 3px 4px var(--secondary-color);
     color: #f0ead6;
-}
+} 
 
