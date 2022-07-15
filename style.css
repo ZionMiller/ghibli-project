@@ -25,7 +25,7 @@ header{
     color: #f0ead6;
     font-size: 60px;
     text-shadow: 6px 6px 2px #00000057;
-    
+    margin-top: 25px;
 }
 
 /* styles the search box, sets size */
@@ -46,7 +46,7 @@ header{
     font-size: 1rem;
     color:#f0ead6;
     align-content: right;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-left: 23px;
     justify-content: flex-start;
     margin-bottom: 15px;
@@ -181,9 +181,10 @@ i:hover {
 
 
 #logo {
-    align-items: center;
+    /* align-items: center; */
     height: 100px;
-    width: auto;
+    /* width: auto; */
+    margin-bottom: 20px;
 }
 
 .overlay {
