@@ -1,4 +1,4 @@
- #root{
+#root{
     color: #f0ead6;
 }
 
@@ -7,25 +7,24 @@ body {
     background-color: #54a393;
     margin:0;
     /* background-image: linear-gradient(#54a393, #54a39366);*/
+    transition: background 0.2s linear;
 }
 
 header{
     padding: 1rem; 
     display: flex; 
     justify-content: space-around;
-    background-color: var(--secondary-color);
     height: 80px;
 } 
 
-/* sets the drop down color */
+/* sets the header color */
 #nav-dropdown {
     font-family: sans-serif;
     align-content: flex-start;
-    position: fixed;
+    position: absolute;
     color: #f0ead6;
     font-size: 60px;
-    color: #f0ead6;
-    text-shadow: 4px 4px 2px #00000057;
+    text-shadow: 6px 6px 2px #00000057;
     
 }
 
@@ -38,9 +37,6 @@ header{
     text-align: center;
 }
 
-#searchWrapper {
-    /* position: relative; */
-}
 
 #searchBar {
     background-color: transparent;
@@ -50,7 +46,10 @@ header{
     font-size: 1rem;
     color:#f0ead6;
     align-content: right;
-    
+    margin-top: 10px;
+    margin-left: 23px;
+    justify-content: flex-start;
+    margin-bottom: 15px;
 }
 
 #searchBar::placeholder{
@@ -68,6 +67,7 @@ header{
     padding-inline-start: 0;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
+    margin-left: 20px;
 }
 
 .movie-collection{
@@ -130,6 +130,7 @@ favroite button section */
 #containerForHeartIcon { 
     height: 30px;
     max-width:30px;
+    cursor: pointer;
 }
 
 i {
@@ -155,6 +156,9 @@ i:hover {
     font-size: 1rem;
     color:#f0ead6;
     align-items: right;
+    cursor: pointer;
+    margin-left: 900px;
+    position:absolute;
 }
 
 #drop-down::placeholder{
@@ -260,3 +264,58 @@ i:hover {
     background-color: #0a0000;
     color: #eae3cc
 } 
+
+/* dark mode light mode toggle*/
+
+
+
+body.dark {
+	background: #292C35;
+}
+
+.checkbox {
+	opacity: 0;
+	position:absolute;
+    box-sizing: border-box;
+}
+
+.label {
+	/* background-color: #f0ead6; */
+    background-color: transparent;
+    border: 2px solid;
+    /*padding:1rem 1rem; */
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#f0ead6;
+	border-radius: 50px;
+	cursor: pointer;
+	/* display:flow-root; */
+	align-items:center;
+	justify-content:space-between;
+	padding: 4px;
+	position: relative;
+	height: 15px;
+	width: 40px;
+	transform: scale(1.5);
+    margin-left: 23px;
+}
+
+.label .ball {
+	background-color: #f0ead6;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(33px);
+}
+
+#theme:hover{
+    color: #0a0000;
+}

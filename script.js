@@ -17,6 +17,8 @@ const closeModalBtn = document.getElementsByClassName('closeModalBtn');
 //dropdown
 const selectMovie = document.getElementById("drop-down");
 const ghibRev = document.getElementById("nav-dropdown");
+//darkmode toggle
+const chk = document.getElementById('chk');
 
 // get film data from ghibli
 let film;
@@ -97,6 +99,9 @@ closeModalBtn[0].addEventListener("click", (e) => {
     overlay[0].classList.toggle('hidden')
 })
 
+chk.addEventListener('change', (e) => {
+	document.body.classList.toggle('dark');
+});
 
 ////////////////////////////////////////////////////////////////////
 
