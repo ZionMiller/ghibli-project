@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Studio Ghibli Reviews</title>
+    <title>Studio Ghibli Films</title>
     <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/e5cc9a0ce7.js" crossorigin="anonymous" defer> </script>
     <link rel="stylesheet" href="style.css">
@@ -16,8 +16,15 @@
         <div class="containerForSearchBar"></div>
     </header>
 
-    <!--this part is implementing the search bar-->
+    <!--this part is implementing the search bar sections-->
     <main>
+        <!-- <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class=""></i>
+                <i class="">Theme</i>
+                <div class="ball"></div>
+            </label> -->
+
         <div id="searchWrapper">
             <input
                 type="text"
@@ -25,10 +32,17 @@
                 id="searchBar"
                 placeholder="Search"
             />
+            
+            <select name="movies" id="drop-down">
+                <option value="">Select Film</option>
+            </select>
+
         </div>
-        <select name="movies" id="drop-down">
-            <option value="">select movie</option>
-        </select>
+
+        <!-- <select name="movies" id="drop-down">
+            <option value="">Select Film</option>
+        </select> -->
+
         <!-- adding the modal which is the synopsis button-->
         <div class="overlay hidden"> <!-- overlay is used to stack one thing ontop of antoher-->
             <div class="modal" >
@@ -38,6 +52,14 @@
             </div>
         </div>
 
+        <div>
+            <input type="checkbox" class="checkbox" id="chk"/>
+            <label class="label" for="chk">
+                <i id="theme">Theme</i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
         <ul id="movie-collection"></ul>
 
         <div id="wrapper">
@@ -45,8 +67,9 @@
         </div>
 
     </main>
-    <!-- <div id="movie-collection"></div> -->
 
+    
+    <div id="movie-collection"></div>
 </body>
 
 </html>
