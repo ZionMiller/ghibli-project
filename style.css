@@ -13,7 +13,7 @@ header{
     padding: 1rem; 
     display: flex; 
     justify-content: space-around;
-    background-color: var(--secondary-color);
+    background-color: #54a393;
     height: 80px;
 } 
 
@@ -21,7 +21,7 @@ header{
 #nav-dropdown {
     font-family: sans-serif;
     align-content: flex-start;
-    position: fixed;
+    position: absolute;
     color: #f0ead6;
     font-size: 60px;
     color: #f0ead6;
