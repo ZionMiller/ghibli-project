@@ -25,7 +25,6 @@ header{
     color: #f0ead6;
     font-size: 60px;
     text-shadow: 6px 6px 2px #00000057;
-    
 }
 
 /* styles the search box, sets size */
@@ -156,9 +155,10 @@ i:hover {
     font-size: 1rem;
     color:#f0ead6;
     align-items: right;
+    margin-top: ;
     cursor: pointer;
-    margin-left: 900px;
-    position:absolute;
+    margin-left: 950px;
+    position: absolute;
 }
 
 #drop-down::placeholder{

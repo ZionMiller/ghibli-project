@@ -64,16 +64,29 @@ function renderFilms(films) {
     movieCollection.innerHTML = filmArray
 
     films.forEach((film) => {
-        const nameDrop = document.createElement('option');
+        const nameDrop = document.createElement('option')
         selectMovie.append(nameDrop)
-        nameDrop.innerHTML = film.title;
 
-        nameDrop.addEventListener('click', (e) =>{
-            console.log(e)
-        });
+        // code to remove duplicates from drop down
+
+        // function removeduplicate()
+        // {
+        // var mycode = {};
+        // $("select[id='drio-down'] > option").each(function () {
+        //     if(mycode[this.text]) {
+        //         $(this).remove();
+        //     } else {
+        //         mycode[this.text] = this.value;
+        //     }
+        // });
+        // }
+        // removeduplicate();
+        
+        nameDrop.innerHTML = film.director;
     });
 
 }
+
 
 //favorite button toggle can also add like number if want
 const toggler = (e) => {
@@ -99,6 +112,7 @@ closeModalBtn[0].addEventListener("click", (e) => {
     overlay[0].classList.toggle('hidden')
 })
 
+// light & dark mode toggle
 chk.addEventListener('change', (e) => {
 	document.body.classList.toggle('dark');
 });
