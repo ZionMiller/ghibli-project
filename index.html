@@ -10,17 +10,16 @@
 
 <body>
 
-    <!-- adding the modal which is the synopsis button-->
-    <div class="overlay hidden">
-        <div class="modal" >
-            <h4>Synopsis:</h4>
-            <p class="synopsis"></p>
-            <button class="closeModalBtn" ><u>Close</u> </button>
-        </div>
-    </div>
-
     <header>
-        <h1 id="nav-dropdown">Studio Ghibli Movies</h1>
+        <h2 id="nav-dropdown">Ghibli Films</h2>
+        <img id="logo" src="https://i.ibb.co/Wfn9rHr/tumblr-mfoibvy2v41rfjowdo1-500.gif" height="200">
+        <div class="containerForSearchBar"></div>
+
+
+    </header>
+
+    <!--this part is implementing the search bar-->
+    <main>
         <div id="searchWrapper">
             <input
                 type="text"
@@ -28,17 +27,18 @@
                 id="searchBar"
                 placeholder="Search"
             />
+        </div>
         <select name="movies" id="drop-down">
             <option value="">select movie</option>
         </select>
+        <!-- adding the modal which is the synopsis button-->
+        <div class="overlay hidden"> <!-- overlay is used to stack one thing ontop of antoher-->
+            <div class="modal" >
+                <h4>Synopsis:</h4>
+                <p class="synopsis"></p>
+                <button class="closeModalBtn" ><u>Close</u> </button>
+            </div>
         </div>
-        <img id="logo" src="https://i.ibb.co/Wfn9rHr/tumblr-mfoibvy2v41rfjowdo1-500.gif" height="200">
-
-    </header>
-
-    <!--this part is implementing the search bar-->
-    <main>
-        <div class="containerForSearchBar">
 
         <ul id="movie-collection"></ul>
 

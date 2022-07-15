@@ -14,31 +14,32 @@ header{
     display: flex; 
     justify-content: space-around;
     background-color: var(--secondary-color);
+    height: 80px;
 } 
 
 /* sets the drop down color */
 #nav-dropdown {
-    text-align: left;
-    margin-left: 15%;
     font-family: sans-serif;
+    align-content: flex-start;
+    position: fixed;
     color: #f0ead6;
-    font-size: 70px;
+    font-size: 60px;
     color: #f0ead6;
-    margin-bottom: 30px;
     text-shadow: 4px 4px 2px #00000057;
+    
 }
 
 /* styles the search box, sets size */
 .containerForSearchBar { 
     padding-top: 40px;
     margin: auto;
-    width:auto; 
+    width: auto; 
     max-width: 1000px;
-    text-align: left;
+    text-align: center;
 }
 
 #searchWrapper {
-    position: relative;
+    /* position: relative; */
 }
 
 #searchBar {
@@ -48,6 +49,7 @@ header{
     border-radius: 50px;
     font-size: 1rem;
     color:#f0ead6;
+    align-content: right;
     
 }
 
@@ -152,8 +154,7 @@ i:hover {
     border-radius: 50px;
     font-size: 1rem;
     color:#f0ead6;
-    position: absolute;
-    
+    align-items: right;
 }
 
 #drop-down::placeholder{
@@ -172,13 +173,12 @@ i:hover {
     padding:1rem .5rem;
     font-size: 1rem;
     color:#f0ead6;
-    position:absolute;
 }
 
 
 #logo {
-    text-align: center;
-    height: auto;
+    align-items: center;
+    height: 100px;
     width: auto;
 }
 
@@ -205,7 +205,7 @@ i:hover {
     height: 300px;
     margin:auto;
     background-color: #e9e3cd;
-    position: absolute;
+    /* position: absolute; */
     top:0;
     bottom: 0;
     left:0;

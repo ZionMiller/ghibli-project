@@ -8,8 +8,7 @@
 const filmsUrl = "https://ghibliapi.herokuapp.com/films"
 const films = document.getElementById("films")
 const searchBar = document.getElementById('searchBar');
-const movieCollection = document.getElementById
-('movie-collection');
+const movieCollection = document.getElementById('movie-collection');
 //modal
 const synopsis = document.getElementsByClassName('synopsis');
 const overlay = document.getElementsByClassName('overlay');
@@ -23,11 +22,12 @@ const ghibRev = document.getElementById("nav-dropdown");
 let film;
 
 async function fetchFilms() {
-    const response = await fetch("https://ghibliapi.herokuapp.com/films")
+    const response = await fetch(filmsUrl)
     const data = await response.json();
     film = data
     renderFilms(film);
 }
+
 fetchFilms();
 
 //this functions displays the search results and renders the films to show on the page
@@ -50,7 +50,7 @@ function renderFilms(films) {
                     <h3>${films.title}</h3>
                     <p>Year Released: ${films.release_date}</p>
                     <h4.1>Directed by: ${films.director}</h4.1>
-                    <h4.2>Rating: ${films.rt_score}</h4.2>
+                    <h4.2>Rotten Tomatoes: ${films.rt_score}</h4.2>
                     <img class="filmPoster" src="${films.image}" />
                     <button class="openModalBtn" onclick="onClick(event)" value="${films.description}"> Synopsis </button>       
                     <div id="containerForHeartIcon" >
@@ -60,19 +60,20 @@ function renderFilms(films) {
         })
         .join(''); //using .join allows you to remove the commas from the array of films
     movieCollection.innerHTML = filmArray
+
+    films.forEach((film) => {
+        const nameDrop = document.createElement('option');
+        selectMovie.append(nameDrop)
+        nameDrop.innerHTML = film.title;
+
+        nameDrop.addEventListener('click', (e) =>{
+            console.log(e)
+        });
+    });
+
 }
 
-// this is the drop down copied from the other branch
-const dropDown = (e) => {
-    const target = e.target
-    const nameDrop = document.createElement('option')
-    ghibRev.append(selectMovie)
-    selectMovie.append(nameDrop)
-    nameDrop.textContent = filmArray.title
-    const div = document.createElement('div')
-}
-
-//these next functions will focus on the favorite button toggle can also add like number if want
+//favorite button toggle can also add like number if want
 const toggler = (e) => {
     const target = e.target;
     console.log(target)
@@ -100,7 +101,22 @@ closeModalBtn[0].addEventListener("click", (e) => {
 ////////////////////////////////////////////////////////////////////
 
 
-
+// const dropDown = (e) => {
+    // const nameDrop = document.createElement('option');
+    // ghibRev.append(selectMovie)
+    // selectMovie.append(nameDrop)
+    // nameDrop.textContent = filmArray.title;
+    // const div = document.createElement('div')
+    // selectMovie.onchange = function() {
+    // let dropdownOptions = selectMovie.value;
+    // console.log(dropdownOptions);
+    // const dropDownCard = document.createElement('div');
+    // dropDownCard.id = "drop-down-card";
+    // const imgDropDown = document.createElement('img');
+    // imgDropDown.src = filmArray.image;
+    // movieCollection.createElement('div')
+    // }
+// }
 
 
 
