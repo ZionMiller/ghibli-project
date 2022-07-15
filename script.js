@@ -63,26 +63,23 @@ function renderFilms(films) {
         .join(''); //using .join allows you to remove the commas from the array of films
     movieCollection.innerHTML = filmArray
 
+    let directors = []
     films.forEach((film) => {
+        if(!directors.includes(film.director))
+        {
+            directors.push(film.director);
+        }
+    });
+    createDropDown(directors)
+}  
+
+const createDropDown = (array) =>
+{
+    array.forEach(director => {
         const nameDrop = document.createElement('option')
         selectMovie.append(nameDrop)
-
-        // code to remove duplicates from drop down
-
-        // function removeduplicate()
-        // {
-        // var mycode = {};
-        // $("select[id='drio-down'] > option").each(function () {
-        //     if(mycode[this.text]) {
-        //         $(this).remove();
-        //     } else {
-        //         mycode[this.text] = this.value;
-        //     }
-        // });
-        // }
-        // removeduplicate();
         
-        nameDrop.innerHTML = film.director;
+        nameDrop.innerHTML = director;
     });
 
 }
